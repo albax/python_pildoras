@@ -2,3 +2,10 @@ c36 - paquetes distribuibles
 
 setup.py #descripcion del paq a distribuir
 > python setup.py sdist #crea 2 carpetas (dist y paquetecalculos.egg-info)
+#en dist/paqueteCalculos.egg-info esta arch.tar.gz
+
+#install paquete
+>pip3 install paqueteCalculos.egg-info.tar.gz
+
+#unistall paquete
+>pip3 unistall paqueteCalculos.egg-info.tar.gz
