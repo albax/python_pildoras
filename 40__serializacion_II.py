@@ -2,6 +2,9 @@
 ### SERIALIZACION :: 40__serializacion_II.py
 ### SERIALIZACION objetos
 ### pickle.load
+###
+### LISTA []
+### TUPLA ()
 ###############################################
 
 
@@ -37,5 +40,20 @@ class Vehiculos():
 
 #instancias
 coche1 = Vehiculos("Mazda", "MX5")
-coche1 = Vehiculos("Seat", "Leon")
-coche1 = Vehiculos("Renault", "Megane")
+coche2 = Vehiculos("Seat", "Leon")
+coche3 = Vehiculos("Renault", "Megane")
+coches = [coche1, coche2, coche3] #lista
+
+fichero=open("losCoches", "wb")
+pickle.dump(coches, fichero)
+fichero.close()
+
+del (fichero)
+
+ficheroApertura = open("losCoches", "rb")
+misCoches = pickle.load(ficheroApertura)
+ficheroApertura.close()
+
+for c in misCoches:
+    print(c)
+    print(c.estado())
