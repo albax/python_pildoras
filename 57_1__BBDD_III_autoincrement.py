@@ -9,6 +9,7 @@ import sqlite3
 
 ##PASOS##
 #1. abrir|crear conexion
+##gestionProductos
 miConexion=sqlite3.connect("57_1__BBDD_III_autoincrement")
 
 #2. crear puntero - cursor
@@ -19,7 +20,7 @@ miCursor=miConexion.cursor()
 miCursor.execute('''
     CREATE TABLE PRODUCTOS(
         ID INTEGER PRIMARY KEY AUTOINCREMENT,
-        NOM_ARTICULO VARCHAR(50),
+        NOM_ARTICULO VARCHAR(50) UNIQUE,
         PRECIO INTEGER,
         SECCION VARCHAR(20)
     )
