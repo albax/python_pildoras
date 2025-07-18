@@ -27,3 +27,11 @@ alCubo=lambda nro:pow(nro,3)
 # alCubo=lambda nro:nro**3
 
 print(alCubo(13))
+
+print("--------------------------------------------")
+
+destacar_valor=lambda comision:"¡¡{}!! $$".format(comision)
+
+comision_Ana=5600
+
+print(destacar_valor(comision_Ana))
